@@ -32,15 +32,21 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.App" Version="$(AspNetCoreAppRuntimeFrameworkVersion)">
+      <IsImplicitlyDefined>true</IsImplicitlyDefined>
+      <PrivateAssets>All</PrivateAssets>
+      <Publish>true</Publish>
+    </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.1.4" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
     <PackageReference Include="ServiceStack.OrmLite.PostgreSQL.Core" Version="5.4.0" />
+    <PackageReference Include="StarMicronics.CloudPRNT-Utility" Version="1.0.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="3.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.Filters" Version="4.3.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Src\Models\mS" />
     <Folder Include="wwwroot\test-results\" />
   </ItemGroup>
 </Project>

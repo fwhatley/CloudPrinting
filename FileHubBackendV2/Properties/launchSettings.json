@@ -1,5 +1,5 @@
 {
-  "DescriptionOfThisFile":  "This file is use by Visual Studio to debug the code pointing to different environments. AppUrl is the url for the browser for debugging purposes", 
+  "DescriptionOfThisFile": "This file is use by Visual Studio to debug the code pointing to different environments. AppUrl is the url for the browser for debugging purposes",
   "iisSettings": {
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
@@ -17,22 +17,13 @@
         "applicationUrl": "http://localhost:80"
       }
     },
-    "DEV": {
+    "FileHubBackendV2": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development",
-        "DB_CONNECTION_STRING": "Server=localhost;Port=5432;Database=filehub_db;User Id=filehub_owner;Password=filehub_owner_password"
+        "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "http://localhost:80"
-    },
-    "PROD": {
-      "commandName": "Project",
-      "launchBrowser": true,
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Production"
-      },
-      "applicationUrl": "http://localhost:80"
+      "applicationUrl": "http://localhost:5000"
     }
   }
 }
