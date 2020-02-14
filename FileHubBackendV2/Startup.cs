@@ -141,7 +141,7 @@ namespace FileHubBackendV2
             // specifying the Swagger JSON endpoint.
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Selenium Reporter V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Cloud Printing mS V1");
                 c.RoutePrefix = string.Empty;
             });
 
