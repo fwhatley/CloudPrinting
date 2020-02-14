@@ -54,8 +54,8 @@ namespace FileHubBackendV2
                     c.SwaggerDoc("v1", new Info
                     {
                         Version = "v1",
-                        Title = "Selenium Reporter API",
-                        Description = ".net core 2.1 API to upload Selenium images and data around them"
+                        Title = "Cloud Printing MicroService",
+                        Description = ".net core 2.1 mS to for printing receipts using the cloud"
                     });
 
 
