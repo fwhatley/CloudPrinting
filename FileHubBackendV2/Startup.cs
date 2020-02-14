@@ -1,6 +1,6 @@
-﻿using FileHubBackendV2.App.FileRecords;
-using FileHubBackendV2.Repositories;
-using FileHubBackendV2.Services;
+﻿// using FileHubBackendV2.App.FileRecords;
+// using FileHubBackendV2.Repositories;
+// using FileHubBackendV2.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -100,14 +100,14 @@ namespace FileHubBackendV2
                 services.AddSingleton<IDbConnectionFactory>(dbFactory);
 
                 // --------------- App Services ------------------- //
-                services.AddScoped<IFilesService, FilesService>();
-                services.AddScoped<IFileRecordsService, FileRecordsService>();
+                // services.AddScoped<IFilesService, FilesService>();
+                // services.AddScoped<IFileRecordsService, FileRecordsService>();
 
                 // --------------- App repositories ------------------- //
                 //services.AddSingleton<IFileRecordsRepository, FakeFilesRepository>(); // TODO: use for testing, not needed if inmemory db is used
                 //services.AddSingleton<IFileRecordsRepository, FilesEfRepository>(); // Enable this if you want to use EF
-                services.AddSingleton<IFilesRepository, FilesPgRepository>(); // Enable this if you want to use OrmLite
-                services.AddSingleton<IFileRecordsRepository, FileRecordsPgRepository>(); // Enable this if you want to use OrmLite
+                // services.AddSingleton<IFilesRepository, FilesPgRepository>(); // Enable this if you want to use OrmLite
+                // services.AddSingleton<IFileRecordsRepository, FileRecordsPgRepository>(); // Enable this if you want to use OrmLite
 
             }
             catch (Exception e)
