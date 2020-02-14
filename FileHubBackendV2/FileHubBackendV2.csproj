@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <DockerComposeProjectPath>../docker-compose.dcproj</DockerComposeProjectPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="DbScripts\**" />
+    <Content Remove="DbScripts\**" />
+    <EmbeddedResource Remove="DbScripts\**" />
+    <None Remove="DbScripts\**" />
+    <Content Remove="wwwroot\results\pos tests 12-02-23.html" />
+    <Content Remove="wwwroot\results\latest.html" />
+    <Content Remove="wwwroot\test-results\testResults.html" />
+    <Content Remove="wwwroot\test-results\latest.html" />
+    <None Remove="Dockerfile.old" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20181006171824_AddSeedDataForFiles.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Src\App\FileRecords\FakeFilesRepository.cs.forLater" />
+    <None Remove="Src\App\FileRecords\FileHubContext.cs.forLatter" />
+    <None Remove="Src\App\FileRecords\FilesEfRepository.cs.forLatter" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.1.4" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
+    <PackageReference Include="ServiceStack.OrmLite.PostgreSQL.Core" Version="5.4.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="3.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Filters" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\test-results\" />
+  </ItemGroup>
+</Project>
