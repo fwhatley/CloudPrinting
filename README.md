@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
-A sample working MicroService using Star Micronics Utility Package for dotnet core 2.1. Base on the documentation: [https://star-m.jp/products/s_print/CloudPRNTSDK/Documentation/en/developerguide/introduction.html](https://star-m.jp/products/s_print/CloudPRNTSDK/Documentation/en/developerguide/introduction.html).
+A sample working MicroService using Star Micronics Utility Package for dotnet core 2.1. Base on the documentation: [https://star-m.jp/products/s_print/CloudPRNTSDK/Documentation/en/developerguide/introduction.html](https://star-m.jp/products/s_print/CloudPRNTSDK/Documentation/en/developerguide/introduction.html). It also includes dockerfiles and swagger so you can deploy straight to your server a sample working app.
 
 ## Set up your dev env
   - open `cloudprintingservice.sln` with Visual Studio, Rider, or your preferred IDE.
