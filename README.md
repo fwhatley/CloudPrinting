@@ -9,9 +9,9 @@ A sample working MicroService using Star Micronics Utility Package for dotnet co
   - run the app
     - app will run at [http://localhost/index.html](http://localhost/index.html)
 ## Build a new image
+Change `fredywhatley` below to your company's docker account name.
 ```sh
 # build image fredywhatley/cloudprintingservice:tagname 
-Change `fredywhatley` below to your company's docker account name.
 docker build -f Dockerfile -t fredywhatley/cloudprintingservice:2.0.0 . # make sure to update the tag
 
 # push to docker central with push fredywhatley/cloudprintingservice:tagname 
