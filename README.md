@@ -4,7 +4,7 @@
 
 
 ## Set up your dev env
-  - open `cloudprintingservice.sln` with Visual Studio for Mac or Windows
+  - open `cloudprintingservice.sln` with Visual Studio, Rider, or your preferred IDE.
   - run the app
     - app will run at [http://localhost/index.html](http://localhost/index.html)
 ## Build a new image
