@@ -17,7 +17,7 @@
         "applicationUrl": "http://localhost:80"
       }
     },
-    "FileHubBackendV2": {
+    "CloudPrintingService": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {

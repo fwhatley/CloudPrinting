@@ -1,7 +1,4 @@
-﻿// using CloudPrintingService.App.FileRecords;
-// using CloudPrintingService.Repositories;
-// using CloudPrintingService.Services;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -12,7 +9,7 @@ using System;
 using System.IO;
 using System.Reflection;
 
-namespace FileHubBackendV2
+namespace CloudPrintingService
 {
     public class Startup
     {

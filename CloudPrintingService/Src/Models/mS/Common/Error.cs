@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using Newtonsoft.Json;
 
-namespace FileHubBackendV2.Models.mS.Common
+namespace CloudPrintingService.Models.mS.Common
 {
 
   /// <summary>

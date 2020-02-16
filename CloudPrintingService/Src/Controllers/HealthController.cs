@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace FileHubBackendV2.Controllers
+namespace CloudPrintingService.Controllers
 {
 
     /// <summary>

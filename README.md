@@ -4,18 +4,18 @@
 
 
 ## Set up your dev env
-  - open `FileHubBackendV2.sln` with Visual Studio for Mac or Windows
+  - open `cloudprintingservice.sln` with Visual Studio for Mac or Windows
   - run the app
     - app will run at [http://localhost/index.html](http://localhost/index.html)
 ## Build a new image
 ```sh
-# build image fredywhatley/filehubbackendv2:tagname 
-docker build -f Dockerfile -t fredywhatley/filehubbackendv2:2.0.0 . # make sure to update the tag
+# build image fredywhatley/cloudprintingservice:tagname 
+docker build -f Dockerfile -t fredywhatley/cloudprintingservice:2.0.0 . # make sure to update the tag
 
-# push to docker central with push fredywhatley/filehubbackendv2:tagname 
+# push to docker central with push fredywhatley/cloudprintingservice:tagname 
 docker login
-docker push fredywhatley/filehubbackendv2:2.0.0 # tag must match what you used above
-docker pull fredywhatley/filehubbackendv2:2.0.0 # tag must match what you used above
+docker push fredywhatley/cloudprintingservice:2.0.0 # tag must match what you used above
+docker pull fredywhatley/cloudprintingservice:2.0.0 # tag must match what you used above
 ```
 
 ## Serve production build locally

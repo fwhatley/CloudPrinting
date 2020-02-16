@@ -3,34 +3,12 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <DockerComposeProjectPath>../docker-compose.dcproj</DockerComposeProjectPath>
-    <RootNamespace>FileHubBackendV2</RootNamespace>
+    <RootNamespace>CloudPrintingService</RootNamespace>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <NoWarn>$(NoWarn);1591</NoWarn>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Remove="DbScripts\**" />
-    <Content Remove="DbScripts\**" />
-    <EmbeddedResource Remove="DbScripts\**" />
-    <None Remove="DbScripts\**" />
-    <Content Remove="wwwroot\results\pos tests 12-02-23.html" />
-    <Content Remove="wwwroot\results\latest.html" />
-    <Content Remove="wwwroot\test-results\testResults.html" />
-    <Content Remove="wwwroot\test-results\latest.html" />
-    <None Remove="Dockerfile.old" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Remove="Migrations\20181006171824_AddSeedDataForFiles.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Remove="Src\App\FileRecords\FakeFilesRepository.cs.forLater" />
-    <None Remove="Src\App\FileRecords\FileHubContext.cs.forLatter" />
-    <None Remove="Src\App\FileRecords\FilesEfRepository.cs.forLatter" />
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" Version="$(AspNetCoreAppRuntimeFrameworkVersion)">
@@ -50,9 +28,4 @@
     <Folder Include="Src\Models\mS" />
   </ItemGroup>
 
-  <ItemGroup>
-    <_ContentIncludedByDefault Remove="wwwroot\test-results\.DS_Store" />
-    <_ContentIncludedByDefault Remove="wwwroot\test-results\aktivate test run 2019-05-20-12.html" />
-    <_ContentIncludedByDefault Remove="wwwroot\test-results\latest.html" />
-  </ItemGroup>
 </Project>

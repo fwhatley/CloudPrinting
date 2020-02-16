@@ -1,4 +1,4 @@
-﻿namespace FileHubBackendV2.Utils
+﻿namespace CloudPrintingService.Utils
 {
     public class ErrorStatusCode
     {

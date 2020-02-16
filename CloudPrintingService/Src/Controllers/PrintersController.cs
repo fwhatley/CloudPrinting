@@ -2,14 +2,14 @@
 using System.IO;
 using System.Linq;
 using System.Runtime.Serialization.Json;
-using FileHubBackendV2.Models;
-using FileHubBackendV2.Models.mS.Common;
-using FileHubBackendV2.Utils;
+using CloudPrintingService.Models;
+using CloudPrintingService.Models.mS.Common;
+using CloudPrintingService.Utils;
 using Microsoft.AspNetCore.Mvc;
 using StarMicronics.CloudPrnt;
 using StarMicronics.CloudPrnt.CpMessage;
 
-namespace FileHubBackendV2.Controllers
+namespace CloudPrintingService.Controllers
 {
 
 [Route("api/printers")]

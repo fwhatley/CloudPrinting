@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace FileHubBackendV2.Models
+namespace CloudPrintingService.Models
 {
     public class PrintJobQueueItem
     {

@@ -1,15 +1,15 @@
 ﻿version: '3.4'
 
 networks:
-    filehub-network:
+  cloudprintingservice-network:
         driver: bridge
 
 services:
-  filehubbackendv2:
+  cloudprintingservice:
     build:
       context: .
       dockerfile: Dockerfile
-    image: fredywhatley/filehubbackendv2
+    image: fredywhatley/cloudprintingservice
     # depends_on:
     #   - "postgres_image"
     ports:
@@ -17,22 +17,8 @@ services:
     environment:
         DB_CONNECTION_STRING: ${DB_CONNECTION_STRING}
     networks:
-        - filehub-network
+        - cloudprintingservice-network
   
-  # postgres_image:
-  #   image: postgres:11.3
-  #   ports:
-  #     - "5433"
-  #   restart: always
-  #   volumes:
-  #     - db_volume:/var/lib/postgresql/data
-  #     - ./dbscripts/seed.sql :/docker-entrypoint-initdb.d/seed.sql
-  #   environment:
-  #     POSTGRES_USER: "filehub_owner"
-  #     POSTGRES_PASSWORD: "filehub_owner_password"
-  #     POSTGRES_DB: "filehub_db"
-  #   networks:
-  #     - filehub-network
 volumes:
   db_volume:
        
