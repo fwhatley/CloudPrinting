@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using StarMicronics.CloudPrnt;
 using StarMicronics.CloudPrnt.CpMessage;
 
-namespace FileHubBackendV2.Src.Controllers
+namespace FileHubBackendV2.Controllers
 {
 
 [Route("api/printers")]
@@ -97,7 +97,7 @@ namespace FileHubBackendV2.Src.Controllers
             // ref: https://www.exceptionnotfound.net/the-asp-net-web-api-exception-handling-pipeline-a-guided-tour/
             var err = new Error(ErrorStatusCode._1234123, 
                 $"Required parameter {paramName} is missing.", 
-                methodName, "CWPOS", 400, new List<ErrorAttributes>());
+                methodName, "CloudPrintService", 400, new List<ErrorAttributes>());
             return err;
         }
         
@@ -105,7 +105,7 @@ namespace FileHubBackendV2.Src.Controllers
         {
             var err = new Error(ErrorStatusCode._1234123, 
                 $"Required payload {payloadName} is missing.", 
-                methodName, "CWPOS", 400, new List<ErrorAttributes>());
+                methodName, "CloudPrintService", 400, new List<ErrorAttributes>());
             return err;
         }
         
@@ -113,7 +113,7 @@ namespace FileHubBackendV2.Src.Controllers
         {
             var err = new Error(ErrorStatusCode._1234123, 
                 $"Resource not found for {text}", 
-                methoName, "CWPOS", 404, new List<ErrorAttributes>());
+                methoName, "CloudPrintService", 404, new List<ErrorAttributes>());
             return err;
         }
         

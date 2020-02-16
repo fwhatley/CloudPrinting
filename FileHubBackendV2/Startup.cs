@@ -5,11 +5,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Logging;
-using ServiceStack.Data;
-using ServiceStack.OrmLite;
-using ServiceStack.OrmLite.PostgreSQL;
 using Swashbuckle.AspNetCore.Filters;
 using Swashbuckle.AspNetCore.Swagger;
 using System;
@@ -80,34 +76,11 @@ namespace FileHubBackendV2
                 services.AddMvc();
                 services.AddSingleton(Configuration); // Whenever we use IConfigration there we are going to get instance of Configuration: https://www.c-sharpcorner.com/article/setting-and-reading-values-from-app-settings-json-in-net-core/
 
-                // set up db OrmLite with Postgres
-                // used reference: https://github.com/ServiceStack/ServiceStack.OrmLite
-                //var connectionString = Configuration.GetValue<string>("Data:ConnectionStrings:PgSqlDatabase");
-                //var dbFactory = new OrmLiteConnectionFactory(connectionString, new PostgreSqlDialectProvider()
-                //{
-                //    NamingStrategy = new OrmLiteNamingStrategyBase()
-                //});
-
-                var connectionString = Environment.GetEnvironmentVariable("DB_CONNECTION_STRING");
-                Console.WriteLine("******************DB_CONNECTION_STRING START***********************");
-                Console.WriteLine(connectionString);
-                Console.WriteLine("******************DB_CONNECTION_STRING END***********************");
-                var dbFactory = new OrmLiteConnectionFactory(connectionString, new PostgreSqlDialectProvider()
-                {
-                    NamingStrategy = new OrmLiteNamingStrategyBase()
-                });
-
-                services.AddSingleton<IDbConnectionFactory>(dbFactory);
-
                 // --------------- App Services ------------------- //
-                // services.AddScoped<IFilesService, FilesService>();
-                // services.AddScoped<IFileRecordsService, FileRecordsService>();
+                // add here
 
                 // --------------- App repositories ------------------- //
-                //services.AddSingleton<IFileRecordsRepository, FakeFilesRepository>(); // TODO: use for testing, not needed if inmemory db is used
-                //services.AddSingleton<IFileRecordsRepository, FilesEfRepository>(); // Enable this if you want to use EF
-                // services.AddSingleton<IFilesRepository, FilesPgRepository>(); // Enable this if you want to use OrmLite
-                // services.AddSingleton<IFileRecordsRepository, FileRecordsPgRepository>(); // Enable this if you want to use OrmLite
+                // add here
 
             }
             catch (Exception e)
@@ -128,15 +101,6 @@ namespace FileHubBackendV2
             // Enable cors for any call: https://docs.microsoft.com/en-us/aspnet/core/security/cors?view=aspnetcore-2.1, make sure to add cservices.AddCors(); in ConfigureServices() before
             app.UseCors("AllowAll");
 
-            // For the wwwroot folder
-            app.UseStaticFiles();
-            app.UseDirectoryBrowser(new DirectoryBrowserOptions
-            {
-                FileProvider = new PhysicalFileProvider(
-                Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "test-results")),
-                RequestPath = "/test-results"
-            });
-
             // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.), 
             // specifying the Swagger JSON endpoint.
             app.UseSwaggerUI(c =>
@@ -153,12 +117,6 @@ namespace FileHubBackendV2
 
             app.UseStatusCodePages();
             app.UseMvc();
-
-            // let mvc handle everything
-            /*app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync("Hello World!");
-            });*/
         }
     }
 }

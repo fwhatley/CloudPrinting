@@ -47,6 +47,11 @@
 
   <ItemGroup>
     <Folder Include="Src\Models\mS" />
-    <Folder Include="wwwroot\test-results\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\test-results\.DS_Store" />
+    <_ContentIncludedByDefault Remove="wwwroot\test-results\aktivate test run 2019-05-20-12.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\test-results\latest.html" />
   </ItemGroup>
 </Project>
