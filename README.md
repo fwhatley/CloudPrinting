@@ -1,8 +1,7 @@
-# CloudPrinting
+# CloudPrintingService
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
-This is the API for the FileHub app: [https://github.com/fwhatley/FileHubFrontend](https://github.com/fwhatley/FileHubFrontend)
 
 ## Set up your dev env
   - open `FileHubBackendV2.sln` with Visual Studio for Mac or Windows

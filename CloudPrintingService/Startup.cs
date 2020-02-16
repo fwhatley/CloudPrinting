@@ -1,6 +1,6 @@
-﻿// using FileHubBackendV2.App.FileRecords;
-// using FileHubBackendV2.Repositories;
-// using FileHubBackendV2.Services;
+﻿// using CloudPrintingService.App.FileRecords;
+// using CloudPrintingService.Repositories;
+// using CloudPrintingService.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
