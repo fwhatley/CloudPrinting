@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
+A sample working MicroService using Star Micronics Utility Package for dotnet core 2.1. Base on the documentation: [https://star-m.jp/products/s_print/CloudPRNTSDK/Documentation/en/developerguide/introduction.html](https://star-m.jp/products/s_print/CloudPRNTSDK/Documentation/en/developerguide/introduction.html).
 
 ## Set up your dev env
   - open `cloudprintingservice.sln` with Visual Studio, Rider, or your preferred IDE.
@@ -10,6 +11,7 @@
 ## Build a new image
 ```sh
 # build image fredywhatley/cloudprintingservice:tagname 
+Change `fredywhatley` below to your company's docker account name.
 docker build -f Dockerfile -t fredywhatley/cloudprintingservice:2.0.0 . # make sure to update the tag
 
 # push to docker central with push fredywhatley/cloudprintingservice:tagname 
